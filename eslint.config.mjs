@@ -15,7 +15,7 @@ export default [
 		files: [
 			'./**/*.ts',
 		],
-		ignore: [
+		ignores: [
 			'./**/*.d.ts',
 		],
 	},

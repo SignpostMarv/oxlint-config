@@ -8,7 +8,7 @@ export default [
 		files: [
 			'./**/*.mjs',
 		],
-		ignore: [
+		ignores: [
 			'./**/*.js',
 		],
 	},
