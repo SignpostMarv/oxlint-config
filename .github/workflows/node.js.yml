@@ -19,7 +19,7 @@ jobs:
             - run: npm ci
             - run: ./node_modules/.bin/tsc --project ./tsconfig.app-check.json
             - run: ./node_modules/.bin/prettier . --check
-            - run: ./node_modules/.bin/eslint --cache './**/*.ts'
+            - run: ./node_modules/.bin/eslint --config ./eslint.config.ts --cache --ignore-pattern './eslint.config.ts' './**/*.ts'
     coverage:
         needs: basic-checks
         runs-on: ubuntu-latest

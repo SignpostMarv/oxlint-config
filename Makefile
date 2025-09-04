@@ -14,12 +14,12 @@ lint--prettier:
 	@./node_modules/.bin/prettier . --check
 
 lint--eslint:
+	@echo 'checking eslint for all issues with typescript files'
+	@./node_modules/.bin/eslint --config ./eslint.config.ts --cache --ignore-pattern './eslint.config.ts' './**/*.ts'
 	@echo 'build config'
 	@./node_modules/.bin/tsc --project ./tsconfig.eslint.json
 	@echo 'checking eslint for all issues with config'
 	@./node_modules/.bin/eslint --config eslint.config.js.mjs --cache './**/*.mjs'
-	@echo 'checking eslint for all issues'
-	@./node_modules/.bin/eslint --cache './**/*.ts'
 
 lint: lint--prettier lint--tsc lint--eslint
 
