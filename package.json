@@ -11,7 +11,7 @@
   "exports": "./index.js",
   "types": "./index.d.ts",
   "devDependencies": {
-    "@eslint/js": "9.34.0",
+    "@eslint/js": "^9.34.0",
     "@types/eslint": "^9.6.1",
     "@types/node": "^22.13.10",
     "@typescript-eslint/parser": "^8.42.0",
