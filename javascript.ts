@@ -2,7 +2,20 @@
 import js from '@eslint/js';
 import typescript_eslint from 'typescript-eslint';
 
-export default [
+import type {
+	Linter,
+} from 'eslint';
+
+export const javascript:(
+	| {
+		readonly rules: Readonly<Linter.RulesRecord>;
+	}
+	| {
+		name?: string;
+		rules?: object;
+	}
+	| { ignores: string[]; }
+)[] = [
 	js.configs.recommended,
 	...typescript_eslint.configs.recommended,
 	{
@@ -90,3 +103,5 @@ export default [
 		ignores: ['**/*.d.ts'],
 	},
 ];
+
+export default javascript;
