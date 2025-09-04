@@ -17,12 +17,10 @@ jobs:
                   node-version: 23.x
                   cache: 'npm'
             - run: npm ci
-            - name: Build
-              run: ./node_modules/.bin/tsc --project ./tsconfig.app.json
-            - name: Run Prettier
-              run: ./node_modules/.bin/prettier . --check
-            - name: Run ESLint
-              run: ./node_modules/.bin/eslint ./*.ts
+            - run: ./node_modules/.bin/tsc --project ./tsconfig.app-check.json
+            - run: ./node_modules/.bin/prettier . --check
+            - run: ./node_modules/.bin/eslint --config eslint.config.js.mjs './**/*.mjs'
+            - run: ./node_modules/.bin/eslint --cache './**/*.ts'
     coverage:
         needs: basic-checks
         runs-on: ubuntu-latest
