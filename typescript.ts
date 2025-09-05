@@ -17,6 +17,14 @@ export const typescript: (
 )[] = [
 	...config,
 	...typescript_eslint.configs.recommendedTypeChecked,
+	{
+		rules: {
+			'@typescript-eslint/consistent-type-imports': ['error', {
+				fixStyle: 'separate-type-imports',
+				prefer: 'type-imports',
+			}],
+		},
+	},
 ];
 
 export default typescript;
