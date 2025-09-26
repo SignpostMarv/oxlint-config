@@ -7,13 +7,13 @@ import type {
 
 export const typescript: (
 	| {
-		readonly rules: Readonly<Linter.RulesRecord>;
+		readonly rules: Readonly<Linter.RulesRecord>,
 	}
 	| {
-		name?: string;
-		rules?: object;
+		name?: string,
+		rules?: object,
 	}
-	| { ignores: string[]; }
+	| { ignores: string[] }
 )[] = [
 	...config,
 	...typescript_eslint.configs.recommendedTypeChecked,
