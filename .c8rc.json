@@ -2,5 +2,10 @@
 	"reporter": ["text", "html"],
 	"report-dir": "./coverage",
 	"all": true,
-	"exclude": ["./**/*.d.ts", "./**/*.js"]
+	"exclude": [
+		"./**/*.d.ts",
+		"./**/*.js",
+		"./eslint.config.ts",
+		"./eslint.config.js.mjs"
+	]
 }
