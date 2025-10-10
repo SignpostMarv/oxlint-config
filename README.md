@@ -8,7 +8,7 @@
 # Usage
 
 ```js
-import config from '@signpostmarv/eslint-config';
+import {typescript} from '@signpostmarv/eslint-config';
 import parser from '@typescript-eslint/parser';
 
 export default [
@@ -20,6 +20,6 @@ export default [
 			},
 		},
 	},
-	...config,
+	...typescript,
 ];
 ```

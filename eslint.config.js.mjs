@@ -1,9 +1,9 @@
 import {
-	javascript as config,
+	javascript,
 } from './index.js';
 
-export default [
-	...config,
+const config = [
+	...javascript,
 	{
 		files: [
 			'./**/*.mjs',
@@ -13,3 +13,6 @@ export default [
 		],
 	},
 ];
+
+// eslint-disable-next-line imports/no-default-export
+export default config;

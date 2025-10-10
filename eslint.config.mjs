@@ -1,7 +1,11 @@
-import config from './index.js';
+// eslint-disable-next-line imports/no-unresolved
 import parser from '@typescript-eslint/parser';
 
-export default [
+import {
+	typescript,
+} from './index.js';
+
+const config = [
 	{
 		languageOptions: {
 			parser,
@@ -10,7 +14,7 @@ export default [
 			},
 		},
 	},
-	...config,
+	...typescript,
 	{
 		files: [
 			'./**/*.ts',
@@ -20,3 +24,6 @@ export default [
 		],
 	},
 ];
+
+// eslint-disable-next-line imports/no-default-export
+export default config;

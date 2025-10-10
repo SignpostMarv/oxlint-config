@@ -1,11 +1,15 @@
-import config from './javascript.js';
+// eslint-disable-next-line imports/no-unresolved
 import typescript_eslint from 'typescript-eslint';
 
 import type {
 	Linter,
 } from 'eslint';
 
-export const typescript: (
+import {
+	javascript,
+} from './javascript.js';
+
+const typescript: (
 	| {
 		readonly rules: Readonly<Linter.RulesRecord>,
 	}
@@ -15,7 +19,7 @@ export const typescript: (
 	}
 	| { ignores: string[] }
 )[] = [
-	...config,
+	...javascript,
 	...typescript_eslint.configs.recommendedTypeChecked,
 	{
 		rules: {
@@ -27,4 +31,6 @@ export const typescript: (
 	},
 ];
 
-export default typescript;
+export {
+	typescript,
+};

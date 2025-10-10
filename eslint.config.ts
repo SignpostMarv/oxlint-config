@@ -1,5 +1,8 @@
-import config from './index.js';
 import parser from '@typescript-eslint/parser';
+
+import {
+	typescript,
+} from './index.js';
 
 export default [
 	{
@@ -10,7 +13,7 @@ export default [
 			},
 		},
 	},
-	...config,
+	...typescript,
 	{
 		files: [
 			'./**/*.ts',

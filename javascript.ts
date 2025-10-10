@@ -1,14 +1,15 @@
-
 import js from '@eslint/js';
+// eslint-disable-next-line imports/no-unresolved
 import typescript_eslint from 'typescript-eslint';
 import stylistic from '@stylistic/eslint-plugin';
+import imports from 'eslint-plugin-import';
 
 import type {
 	ESLint,
 	Linter,
 } from 'eslint';
 
-export const javascript: (
+const javascript: (
 	| {
 		readonly plugins: Record<string, ESLint.Plugin>,
 		readonly rules: Readonly<Linter.RulesRecord>,
@@ -24,6 +25,7 @@ export const javascript: (
 	{
 		plugins: {
 			'@stylistic': stylistic,
+			imports,
 		},
 		rules: {
 			'@typescript-eslint/member-ordering': ['error', {
@@ -230,6 +232,52 @@ export const javascript: (
 			'@stylistic/type-named-tuple-spacing': ['error'],
 			'@stylistic/wrap-iife': ['error', 'inside'],
 			'@stylistic/yield-star-spacing': ['error', 'after'],
+			'imports/export': ['error'],
+			'imports/no-deprecated': ['error'],
+			'imports/no-empty-named-blocks': ['error'],
+			'imports/no-extraneous-dependencies': ['error'],
+			'imports/no-mutable-exports': ['error'],
+			'imports/no-named-as-default': ['error'],
+			'imports/no-named-as-default-member': ['error'],
+			'imports/no-unused-modules': ['error'],
+			'imports/no-amd': ['error'],
+			'imports/no-commonjs': ['error'],
+			'imports/no-import-module-exports': ['error'],
+			'imports/unambiguous': ['error'],
+			'imports/default': ['error'],
+			'imports/enforce-node-protocol-usage': ['error', 'always'],
+			'imports/named': ['error'],
+			'imports/namespace': ['error'],
+			'imports/no-absolute-path': ['error'],
+			'imports/no-cycle': ['error'],
+			'imports/no-dynamic-require': ['error'],
+			'imports/no-internal-modules': ['error'],
+			'imports/no-relative-packages': ['error'],
+			'imports/no-relative-parent-imports': ['error'],
+			'imports/no-self-import': ['error'],
+			'imports/no-unresolved': ['error'],
+			'imports/no-useless-path-segments': ['error'],
+			'imports/no-webpack-loader-syntax': ['error'],
+			'imports/consistent-type-specifier-style': ['error'],
+			'imports/exports-last': ['error'],
+			'imports/extensions': ['error', 'ignorePackages'],
+			'imports/first': ['error'],
+			'imports/group-exports': ['error'],
+			'imports/newline-after-import': ['error'],
+			'imports/no-anonymous-default-export': ['error'],
+			'imports/no-default-export': ['error'],
+			'imports/no-duplicates': ['error'],
+			'imports/no-named-default': ['error'],
+			'imports/no-namespace': ['error'],
+			'imports/no-unassigned-import': ['error'],
+			'imports/order': ['error', {
+				groups: [
+					'builtin',
+					'external',
+					'sibling',
+					'parent',
+				],
+			}],
 		},
 	},
 	{
@@ -237,4 +285,6 @@ export const javascript: (
 	},
 ];
 
-export default javascript;
+export {
+	javascript,
+};
