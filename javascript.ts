@@ -221,12 +221,6 @@ const javascript: (
 			'@stylistic/type-annotation-spacing': ['error', {
 				before: false,
 				after: true,
-				overrides: {
-					arrow: {
-						before: true,
-						after: true,
-					},
-				},
 			}],
 			'@stylistic/type-generic-spacing': ['error'],
 			'@stylistic/type-named-tuple-spacing': ['error'],
