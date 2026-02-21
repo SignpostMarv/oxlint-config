@@ -1,4 +1,4 @@
-// eslint-disable-next-line imports/no-unresolved
+
 import typescript_eslint from 'typescript-eslint';
 
 import type {

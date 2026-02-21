@@ -1,4 +1,4 @@
-// eslint-disable-next-line imports/no-unresolved
+
 import parser from '@typescript-eslint/parser';
 
 import {
@@ -25,5 +25,5 @@ const config = [
 	},
 ];
 
-// eslint-disable-next-line imports/no-default-export
+
 export default config;

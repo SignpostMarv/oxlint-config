@@ -1,8 +1,11 @@
 import js from '@eslint/js';
-// eslint-disable-next-line imports/no-unresolved
+
 import typescript_eslint from 'typescript-eslint';
 import stylistic from '@stylistic/eslint-plugin';
+
+/*
 import imports from 'eslint-plugin-import';
+*/
 
 import type {
 	ESLint,
@@ -25,7 +28,10 @@ const javascript: (
 	{
 		plugins: {
 			'@stylistic': stylistic,
+
+			/*
 			imports,
+			*/
 		},
 		rules: {
 			'@typescript-eslint/member-ordering': ['error', {
@@ -226,6 +232,8 @@ const javascript: (
 			'@stylistic/type-named-tuple-spacing': ['error'],
 			'@stylistic/wrap-iife': ['error', 'inside'],
 			'@stylistic/yield-star-spacing': ['error', 'after'],
+
+			/*
 			'imports/export': ['error'],
 			'imports/no-deprecated': ['error'],
 			'imports/no-empty-named-blocks': ['error'],
@@ -272,6 +280,7 @@ const javascript: (
 					'parent',
 				],
 			}],
+			*/
 		},
 	},
 	{
