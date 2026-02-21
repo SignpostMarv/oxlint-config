@@ -26,3 +26,5 @@
 /.prettierignore
 /.prettierrc
 /tsconfig*.json
+/eslint.config.d.mts
+/eslint.config.js.d.mts
