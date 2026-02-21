@@ -1,5 +1,12 @@
 {
 	"extends": "./tsconfig",
+	"compilerOptions": {
+		"noEmit": false,
+		"declaration": true,
+		"emitDeclarationOnly": false,
+		"rewriteRelativeImportExtensions": true,
+		"sourceMap": true
+	},
 	"include": ["./*.ts"],
-	"exclude": ["./eslint.config.ts"]
+	"exclude": ["./eslint.config.ts", "./**/*.d.mts", "./**/*.d.ts"]
 }

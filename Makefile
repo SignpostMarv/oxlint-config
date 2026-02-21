@@ -25,7 +25,7 @@ lint: lint--prettier lint--tsc lint--eslint
 
 .PHONY: coverage
 coverage: build
-	@./node_modules/.bin/c8 ./node_modules/.bin/eslint index.ts
+	@node --experimental-test-coverage ./test.ts
 
 npm-prep: build lint
 	@echo 'building from ./tsconfig.app-npm.json'

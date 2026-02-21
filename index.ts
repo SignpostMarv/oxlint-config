@@ -1,9 +1,9 @@
 import {
 	typescript,
-} from './typescript.js';
+} from './typescript.ts';
 import {
 	javascript,
-} from './javascript.js';
+} from './javascript.ts';
 
 export {
 	typescript,
