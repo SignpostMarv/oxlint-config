@@ -36,7 +36,7 @@ jobs:
               run: ./node_modules/.bin/tsc --project ./tsconfig.app.json
             - run: ./node_modules/.bin/eslint --config eslint.config.js.mjs './**/*.mjs'
             - name: Generate coverage
-              run: node --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=./coverage/lcov.info ./test.ts
+              run: ./node_modules/.bin/c8 --config=./.c8rc.coveralls.json node ./test.ts
             - name: Coveralls GitHub Action
               uses: coverallsapp/github-action@v2.2.3
               with:
