@@ -31,10 +31,10 @@ lint: lint--prettier lint--tsc lint--eslint
 
 .PHONY: coverage
 coverage: build
-	@node --experimental-test-coverage ./test.ts
+	@node --experimental-test-coverage --test
 
 coverage--lcov: build
-	@node --experimental-test-coverage ./test.ts --test-reporter=lcov --test-reporter-destination=coverage/lcov.info
+	@node --experimental-test-coverage --test-coverage-include='${PWD}/*.ts' --test-coverage-include='${PWD}/*.js' --test --test-reporter=lcov --test-reporter-destination=coverage/lcov.info
 
 npm-prep: build lint
 	@echo 'building from ./tsconfig.app-npm.json'

@@ -10,14 +10,14 @@ import {
 	ESLint,
 } from 'eslint';
 
-import javascript from './eslint.config.js.mjs';
-import module from './eslint.config.mjs';
-import typescript from './eslint.config.ts';
+import javascript from '../eslint.config.js.mjs';
+import module from '../eslint.config.mjs';
+import typescript from '../eslint.config.ts';
 
 import {
 	javascript as javascript_direct,
 	typescript as typescript_direct,
-} from './index.ts';
+} from '../index.ts';
 
 void describe('javascript', () => {
 	void it('behaves', async () => {
@@ -29,7 +29,7 @@ void describe('javascript', () => {
 			});
 
 			await instance.lintFiles(
-				`${import.meta.dirname}/eslint.config.mjs`,
+				`${import.meta.dirname}/../eslint.config.mjs`,
 			);
 		});
 	});
@@ -43,7 +43,7 @@ void describe('javascript', () => {
 			});
 
 			await instance.lintFiles(
-				`${import.meta.dirname}/eslint.config.mjs`,
+				`${import.meta.dirname}/../eslint.config.mjs`,
 			);
 		});
 	});
@@ -59,7 +59,7 @@ void describe('module', () => {
 			});
 
 			await instance.lintFiles(
-				`${import.meta.dirname}/eslint.config.mjs`,
+				`${import.meta.dirname}/../eslint.config.mjs`,
 			);
 		});
 	});
@@ -75,7 +75,7 @@ void describe('typescript', () => {
 			});
 
 			await instance.lintFiles(
-				`${import.meta.dirname}/eslint.config.ts`,
+				`${import.meta.dirname}/../eslint.config.ts`,
 			);
 		});
 	});
@@ -107,7 +107,7 @@ void describe('typescript', () => {
 			});
 
 			await instance.lintFiles(
-				`${import.meta.dirname}/eslint.config.ts`,
+				`${import.meta.dirname}/../eslint.config.ts`,
 			);
 		});
 	});
