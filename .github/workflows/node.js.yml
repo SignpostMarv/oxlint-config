@@ -39,6 +39,7 @@ jobs:
             - run: ./node_modules/.bin/eslint --config eslint.config.js.mjs './**/*.mjs'
             - name: Generate coverage
               run: make coverage--lcov
+            - run: ls -la ./coverage/
             - name: Coveralls GitHub Action
               uses: coverallsapp/github-action@v2.2.3
               with:
