@@ -3,6 +3,8 @@ install:
 
 build:
 	@echo 'building from ./tsconfig.app.json'
+	@./node_modules/.bin/tsc --allowJs --declaration --emitDeclarationOnly --target esnext --moduleResolution bundler --allowImportingTsExtensions ./eslint.config.mjs
+	@./node_modules/.bin/tsc --allowJs --declaration --emitDeclarationOnly --target esnext --moduleResolution bundler --allowImportingTsExtensions ./eslint.config.js.mjs
 	@./node_modules/.bin/tsc --project ./tsconfig.app.json
 
 lint--tsc:
@@ -14,6 +16,8 @@ lint--prettier:
 	@./node_modules/.bin/prettier . --check
 
 lint--eslint:
+	@echo 'fixing issues with declaration files'
+	@./node_modules/.bin/eslint --fix './eslint.*.d.mts'
 	@echo 'checking eslint for all issues with typescript files'
 	@./node_modules/.bin/eslint --config ./eslint.config.ts --cache --ignore-pattern './eslint.config.ts' './**/*.ts'
 	@echo 'build config'
