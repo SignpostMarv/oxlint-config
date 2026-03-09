@@ -5,7 +5,7 @@ build--declarations:
 	@./node_modules/.bin/tsc --allowJs --declaration --emitDeclarationOnly --target esnext --moduleResolution bundler --allowImportingTsExtensions ./eslint.config.mjs
 	@./node_modules/.bin/tsc --allowJs --declaration --emitDeclarationOnly --target esnext --moduleResolution bundler --allowImportingTsExtensions ./eslint.config.js.mjs
 
-build: build--declarations
+build:
 	@echo 'building from ./tsconfig.app.json'
 	@./node_modules/.bin/tsc --project ./tsconfig.app.json
 
