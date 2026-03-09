@@ -33,6 +33,7 @@ jobs:
                   node-version: 25.x
                   cache: 'npm'
             - run: npm ci
+            - run: make build--declarations
             - name: Build
               run: ./node_modules/.bin/tsc --project ./tsconfig.app.json
             - run: ./node_modules/.bin/eslint --config eslint.config.js.mjs './**/*.mjs'
