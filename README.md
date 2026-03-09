@@ -1,15 +1,15 @@
-[![Coverage Status](https://coveralls.io/repos/github/SignpostMarv/eslint-config/badge.svg?branch=main)](https://coveralls.io/github/SignpostMarv/eslint-config?branch=main)
-[![Workflow Status](https://github.com/SignpostMarv/eslint-config/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/SignpostMarv/eslint-config/actions/workflows/node.js.yml?query=branch%3Amain)
+[![Coverage Status](https://coveralls.io/repos/github/SignpostMarv/oxlint-config/badge.svg?branch=main)](https://coveralls.io/github/SignpostMarv/oxlint-config?branch=main)
+[![Workflow Status](https://github.com/SignpostMarv/oxlint-config/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/SignpostMarv/oxlint-config/actions/workflows/node.js.yml?query=branch%3Amain)
 
 # Installation
 
-`npm install --save-dev @signpostmarv/eslint-config`
+`npm install --save-dev @signpostmarv/oxlint-config`
 
 # Usage
 
 ```js
-import {typescript} from '@signpostmarv/eslint-config';
-import parser from '@typescript-eslint/parser';
+import {typescript} from '@signpostmarv/oxlint-config';
+import parser from '@typescript-oxlint/parser';
 
 export default [
 	{
