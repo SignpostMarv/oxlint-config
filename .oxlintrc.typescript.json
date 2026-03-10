@@ -1,11 +1,7 @@
 {
 	"$schema": "./node_modules/oxlint/configuration_schema.json",
-	"extends": [
-		"./.oxlintrc.javascript.json"
-	],
-	"plugins": [
-		"typescript"
-	],
+	"extends": ["./.oxlintrc.javascript.json"],
+	"plugins": ["typescript"],
 	"rules": {
 		"@typescript-eslint/await-thenable": "error",
 		"@typescript-eslint/no-array-delete": "error",
