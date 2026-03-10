@@ -7,19 +7,21 @@
 
 # Usage
 
-```js
-import {typescript} from '@signpostmarv/oxlint-config';
-import parser from '@typescript-oxlint/parser';
+```json
+{
+	"$schema": "./node_modules/oxlint/configuration_schema.json",
+	"extends": [
+		"./node_modules/@signpostmarv/oxlint-config/.oxlintrc.typescript.json"
+	]
+}
+```
 
-export default [
-	{
-		languageOptions: {
-			parser,
-			parserOptions: {
-				project: ['./tsconfig.eslint.json'],
-			},
-		},
-	},
-	...typescript,
-];
+```Makefile
+lint--oxlint:
+	@echo 'checking oxlint for all issues with typescript files'
+	@./node_modules/.bin/oxlint --config ./.oxlintrc.typescript.json ./*.ts --ignore-pattern '**/**/*.d.ts'
+	@echo 'build config'
+	@./node_modules/.bin/tsc --project ./tsconfig.eslint.json
+	@echo 'checking oxlint for all issues with config'
+	@./node_modules/.bin/oxlint --config ./.oxlintrc.javascript.json './**/*.mjs'
 ```

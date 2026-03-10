@@ -1,33 +1,25 @@
 {
   "type": "module",
   "name": "@signpostmarv/oxlint-config",
-  "description": "nodejs template",
+  "description": "Oxlint Config",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SignpostMarv/oxlint-config.git"
   },
   "funding": "https://github.com/SignpostMarv/oxlint-config?sponsor=1",
-  "exports": "./index.js",
-  "types": "./index.d.ts",
+  "files": [
+    "./.oxlintrc.javascript.json",
+    "./.oxlintrc.typescript.json"
+  ],
   "devDependencies": {
-    "@eslint/js": "10.0.1",
-    "@stylistic/eslint-plugin": "5.9.0",
-    "@types/eslint": "9.6.1",
-    "@types/node": "^25.2.3",
-    "@typescript-eslint/parser": "^8.56.1",
-    "jiti": "^2.6.0",
-    "prettier": "^3.6.2",
-    "typescript": "~5.9.2",
-    "typescript-eslint": "^8.56.1"
+    "prettier": "^3.6.2"
   },
   "peerDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@stylistic/eslint-plugin": "^5.9.0",
-    "@types/eslint": "^9.6.1",
-    "typescript-eslint": "^8.56.0"
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "oxlint": "^1.51.0"
   },
   "optionalDependencies": {
-    "@typescript-eslint/parser": "^8.56.1"
+    "oxlint-tsgolint": "^0.16.0"
   }
 }
