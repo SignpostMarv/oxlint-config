@@ -13,13 +13,13 @@
     "./.oxlintrc.typescript.json"
   ],
   "devDependencies": {
-    "prettier": "^3.6.2"
+    "prettier": "^3.8.1"
   },
   "peerDependencies": {
     "@stylistic/eslint-plugin": "^5.10.0",
-    "oxlint": "^1.51.0"
+    "oxlint": "^1.57.0"
   },
   "optionalDependencies": {
-    "oxlint-tsgolint": "^0.16.0"
+    "oxlint-tsgolint": "^0.18.1"
   }
 }
