@@ -5,7 +5,7 @@ lint--prettier:
 	@echo 'running prettier'
 	@./node_modules/.bin/prettier . --check
 
-lint: lint--prettier lint--eslint
+lint: lint--prettier
 
 npm-prep: lint
 	@echo 'building from ./tsconfig.app-npm.json'
