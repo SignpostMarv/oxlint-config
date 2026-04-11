@@ -2,7 +2,7 @@
 	"name": "@signpostmarv/oxlint-config",
 	"dockerComposeFile": "./docker-compose.yml",
 	"service": "devcontainer",
-	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"workspaceFolder": "/app/",
 	"postCreateCommand": "npm config set git-tag-version=false && npm install",
 	"remoteUser": "vscode",
 	"updateRemoteUserUID": true,
@@ -11,6 +11,7 @@
 			"extensions": [
 				"-GitHub.copilot",
 				"EditorConfig.EditorConfig",
+				"-dbaeumer.vscode-eslint",
 				"oxc.oxc-vscode",
 				"github.vscode-github-actions",
 				"ms-azuretools.vscode-docker",
