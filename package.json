@@ -17,9 +17,9 @@
   },
   "peerDependencies": {
     "@stylistic/eslint-plugin": "^5.10.0",
-    "oxlint": "^1.66.0"
+    "oxlint": "^1.76.0"
   },
   "optionalDependencies": {
-    "oxlint-tsgolint": "^0.23.0"
+    "oxlint-tsgolint": "^7.0.2001"
   }
 }
